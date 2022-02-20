@@ -1,0 +1,36 @@
+fieldset{
+    margin: 10px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    
+}
+
+legend{
+    color: white;
+    background-color: red;
+}
+fieldset{
+    background-color: aqua;
+    border: 0;
+}
+h1{
+    color: blue;
+    text-shadow: 1px 1px 2px yellow;
+
+}
+button {
+    margin: 5px;
+}
+
+.b{
+
+    background-color: pink;
+    padding: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+}

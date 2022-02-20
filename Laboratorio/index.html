@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head> 
+
+<body>
+    <title>Formulario</title>
+
+    <h1>Formulario Informacion Alta Telefónica</h1>
+    <form action="">
+        <fieldset>
+            <legend>Datos Personales</legend><br>
+            <label>Nombre:</label>
+            <input id="nombre" type="text" maxlength="30"><br>
+
+            <label>Apellidos:</label>
+            <input id="apellidos" type="text" maxlength="60"><br>
+
+            <label>Direccion:</label>
+            <input id="direccion" type="text" maxlength="60"><br>
+
+            <label>Código Postal:</label>
+            <input id="cp" type="text" required="required"><br>
+
+            <label>Localidad:</label>
+            <input id="localidad" type="text"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tipo de Contratación</legend><br>
+            <input id="nueva_contratacion" type="radio" name="contratacion" checked="checked">Nueva Contratacion
+            <input id="portabilidad" type="radio" name="contratacion" required="required">Portabilidad
+            <input id="cambio" name="contratacion" type="radio">Cambio de Contrato<br>
+         
+            Elija la compañia actual:<select name="compania" id="compania">
+                <option value="0">Movistar</option>
+                <option value="1">Orange</option>
+                <option value="2">Vodafone</option>
+                <option value="3">Yoigo</option>
+                <option value="4">No tengo ninguna compañia</option>
+            </select>
+
+            En casa de portabilidad elija la compañia:<select name="compania" id="compania">
+                <option value="0">Movistar</option>
+                <option value="1">Orange</option>
+                <option value="2">Vodafone</option>
+                <option value="3">Yoigo</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos Bancarios</legend><br>
+    
+            País:<input type="text" id="pais" value="ES" disabled="disabled">(sólo válido Es)<br>
+            Control BAN:<input type="text" id="iban"  placeholder="XX" maxlength="2"  pattern="[0-9]{2}" >(dos digitos)<br>
+            Entidad:<input type="text" id="entidad"  placeholder="XXXX" maxlength="4" pattern="[0-9]{4}" >(cuatro digitos)<br>
+            Sucursal:<input type="text" id="sucursal" placeholder="XXXX" maxlength="4"  pattern="[0-9]{4}" >(cuatro digitos)<br>
+            DC:<input type="text" id="dc" placeholder="XX" maxlength="2"  pattern="[0-9]{2}" >(dos digitos)<br>
+            Cuenta:<input type="text" id="cuenta" placeholder="XXXXXXXXXX" maxlength="10"  pattern="[0-9]{10}" >(diez digitos)
+            </section>
+     
+
+            <fieldset>
+                <legend>Datos Estadisticos- ¿Cómo nos conoció?</legend><br>
+                <input type="checkbox" name="datos" id="tv" ">
+                <label>A través de la TV
+                </label><br>
+
+                <input type="checkbox" name="datos" id="redio">
+                <label>A través de la Radio</label><br>
+
+                <input type="checkbox" name="datos"id="internet" >
+                <label>A través de la Internet</label><br>
+
+                <input type="checkbox" name="datos" id="otros">
+                <label>Otros</label><br>
+
+                <input id="rango" type="range" min="1" max="5">Valoración[1-5]<br>
+                Fecha de la encuesta: <input id="fecha" type="date" value="2019-01-01">
+            </fieldset>
+            </fieldset>
+        </form>
+
+        <button type="submit"  onclick="validar()">Enviar Datos</button>
+        <button type="reset">Borrar Datos</button><br>
+
+        <button class="b" onclick="valoracion()">Mostrar Valoración</button>
+        <button class="b" onclick="cuenta()">Mostrar Cuenta</button>
+        <button class="b" onclick="date()">Mostrar Día Semana</button>
+
+   
+        <script src="form.js"></script>
+</body>
+
+</html>
